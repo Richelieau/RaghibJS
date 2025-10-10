@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengondisian</title>
+</head>
+<body>
+    <script>
+
+        const masuk = confirm("Apakah Anda Ingin Masuk?");
+        const yakin = confirm("Apakah Anda Yakin?");
+        if (masuk) {
+            const nama = prompt("Masukkan Nama Anda : ");
+            alert(`Hello ${nama}`);
+            const nilai = parseInt(prompt("Masukkan Nilai Anda : "), 10);
+            if (nilai >= 91) {
+                alert("Sangat Kompeten");
+            } else if (nilai >= 80) {
+                alert("Kompeten");
+            } else if (nilai >= 60) {
+                alert("Cukup Kompeten");
+            } else if (nilai >= 0) {
+                alert("Kurang Kompeten");
+            }
+        } else {
+            alert("Bye bye");
+        }
+   </script>     
+</body>
+</html>
