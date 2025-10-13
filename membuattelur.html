@@ -1,13 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Membuat Telur</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Program Memasak Telur</title>
 </head>
-<body>
-    <script>
-        
-    </script>
+<body style="font-family: Arial; padding: 20px;">
+  <h2>Program Memasak Telur 🍳</h2>
+  <p>Silakan klik tombol di bawah untuk memulai proses memasak telur.</p>
+
+  <button onclick="masakTelur()">Mulai Memasak</button>
+
+  <script>
+    function masakTelur() {
+      alert("Mulai");
+
+      // 1. Siapkan telur
+      alert("Telur sudah disiapkan");
+
+      // 2. Tentukan jenis masakan
+      let jenisMasakan = prompt("Pilih jenis masakan: orak arik / ceplok / rebus");
+
+      // 3. Percabangan (pengondisian)
+      if (jenisMasakan === "orak arik") {
+          alert("Langkah memasak orak arik:");
+          alert("1. Pecahkan telur ke dalam wadah");
+          alert("2. Kocok telur dan tambahkan bumbu sesuai selera");
+          alert("3. Panaskan penggorengan");
+          alert("4. Masukkan kocokan telur ke penggorengan");
+          alert("5. Aduk telur hingga menjadi orak arik");
+
+      } else if (jenisMasakan === "ceplok") {
+          alert("Langkah memasak telur ceplok:");
+          alert("1. Panaskan penggorengan yang telah diisi minyak");
+          alert("2. Pecahkan telur di atas penggorengan");
+          alert("3. Tunggu hingga matang");
+
+      } else if (jenisMasakan === "rebus") {
+          alert("Langkah memasak telur rebus:");
+          alert("1. Didihkan air di dalam panci");
+          alert("2. Masukkan telur utuh ke dalam panci");
+          alert("3. Tunggu beberapa menit sampai telurnya matang");
+
+      } else {
+          alert("Pilihan tidak dikenali. Silakan pilih: orak arik / ceplok / rebus");
+          return; // hentikan program kalau input salah
+      }
+
+      // 4. Hidangkan
+      alert("Siap untuk dihidangkan");
+      alert("Selesai 🍽️");
+    }
+  </script>
 </body>
 </html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch</title>
+</head>
+<body>
+    <script>
+        const nilai ="A";
+
+        switch(nilai){
+            case "A":
+                document.writeln("Sangat Baik");
+                break;
+            case "B":
+                document.writeln("Baik");
+                break;
+            case "C":
+                document.writeln("Cukup");
+                break;
+            case "D":
+                document.writeln("Kurang");
+                break;
+            case "E":
+                document.writeln("Sangat Kurang");
+                break;
+            default:
+                document.writeln("Nilai Tidak Valid");
+        }
+
+        if (nilai === "A") {
+            document.writeln("Sangat Baik");
+        } else if (nilai === "B") {
+            document.writeln("Baik");
+        } else if (nilai === "C") {
+            document.writeln("Cukup");
+        } else if (nilai === "D") {
+            document.writeln("Kurang");
+        } else if (nilai === "E") {
+            document.writeln("Sangat Kurang");
+        } else {
+            document.writeln("Nilai Tidak Valid");
+        }
+    </script>
+</body>
+</html>
