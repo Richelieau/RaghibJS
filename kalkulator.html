@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator Sederhana</title>
+</head>
+<body>
+  <script>
+    let pilihan;
+
+    // do-while untuk menampilkan menu berulang sampai user memilih keluar
+    do {
+      // Tampilkan menu interaktif
+      pilihan = prompt(
+        "=== Kalkulator Sederhana ===\n" +
+        "1. Penjumlahan\n" +
+        "2. Pengurangan\n" +
+        "3. Perkalian\n" +
+        "4. Pembagian\n" +
+        "5. Faktorial\n" +
+        "6. Keluar\n\n" +
+        "Masukkan pilihan (1-6):"
+      );
+
+      // Validasi agar hanya menerima angka 1–6
+      while (isNaN(pilihan) || pilihan < 1 || pilihan > 6) {
+        pilihan = prompt("Pilihan tidak valid! Masukkan angka antara 1–6:");
+      }
+
+      pilihan = parseInt(pilihan); // ubah ke angka
+
+      if (pilihan >= 1 && pilihan <= 4) {
+        // Input dua angka
+        let a = parseFloat(prompt("Masukkan angka pertama:"));
+        let b = parseFloat(prompt("Masukkan angka kedua:"));
+        let hasil;
+
+        // Validasi khusus pembagian agar pembagi tidak nol
+        while (pilihan === 4 && b === 0) {
+          b = parseFloat(prompt("Pembagi tidak boleh nol! Masukkan angka kedua lagi:"));
+        }
+
+        // Hitung berdasarkan pilihan
+        switch (pilihan) {
+          case 1:
+            hasil = a + b;
+            alert(`Hasil Penjumlahan: ${a} + ${b} = ${hasil}`);
+            break;
+          case 2:
+            hasil = a - b;
+            alert(`Hasil Pengurangan: ${a} - ${b} = ${hasil}`);
+            break;
+          case 3:
+            hasil = a * b;
+            alert(`Hasil Perkalian: ${a} × ${b} = ${hasil}`);
+            break;
+          case 4:
+            hasil = a / b;
+            alert(`Hasil Pembagian: ${a} ÷ ${b} = ${hasil}`);
+            break;
+        }
+
+      } else if (pilihan === 5) {
+        // Faktorial
+        let n = parseInt(prompt("Masukkan angka bulat non-negatif:"));
+
+        // Validasi agar angka tidak negatif
+        while (isNaN(n) || n < 0) {
+          n = parseInt(prompt("Angka tidak valid! Masukkan angka bulat non-negatif:"));
+        }
+
+        let faktorial = 1;
+
+        // for loop untuk menghitung faktorial
+        for (let i = 1; i <= n; i++) {
+          faktorial *= i;
+        }
+
+        alert(`Hasil Faktorial dari ${n} adalah ${faktorial}`);
+
+      } else if (pilihan === 6) {
+        alert("Terima kasih! Program selesai.");
+      }
+
+    } while (pilihan !== 6);
+  </script>
+</body>
+</html>
